@@ -1,12 +1,13 @@
 
 import './App.css';
-import { getProducts } from './services/api';
+import ProductContext from './context/ProductContext';
+
 
 function App() {
   return (
     <div className="App">
       app
-
+<ProductContext/>
     </div>
   );
 }
