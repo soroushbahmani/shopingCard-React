@@ -8,9 +8,9 @@ import ProductContext from './context/ProductContext';
 
 function App() {
   return (
- <ProductContext>
-
- </ProductContext>
+    <ProductContext>
+      <Store />
+    </ProductContext>
   );
 }
 
