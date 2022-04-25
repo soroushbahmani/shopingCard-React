@@ -1,6 +1,6 @@
 
 import './App.css';
-// congtex
+// context
 import ProductContext from './context/ProductContext';
 
 
