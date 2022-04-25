@@ -2,8 +2,8 @@ import React from 'react'
 
 function Product({ProductData}) {
     return (
-        <div>
-            <img src={ProductData.image} alt='img' />
+        <div style={{margin:' 0 20px'}}>
+            <img src={ProductData.image} alt='img' style={{"width" : '200px'}} />
             <h3>{ProductData.title}</h3>
             <p>
                 {ProductData.price}

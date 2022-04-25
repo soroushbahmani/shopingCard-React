@@ -8,8 +8,8 @@ const Store = ()=> {
 
     const products = useContext(ProductContext)
     return (
-        <div>
-            {console.log(products)}
+        <div style={{display:'flex' , justifyContent:'space-between',flexWrap:'wrap' }}>
+       
            {products.map(item => <Product key={item.id} ProductData={item} />)}
         </div>
     )
