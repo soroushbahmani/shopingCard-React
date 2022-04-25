@@ -1,10 +1,12 @@
 
 import './App.css';
+import { getProducts } from './services/api';
 
 function App() {
   return (
     <div className="App">
-app
+      app
+
     </div>
   );
 }
