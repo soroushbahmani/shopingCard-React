@@ -1,6 +1,6 @@
 import React from 'react'
 
-function product() {
+function Product() {
     return (
         <div>
             <img src='' alt='img' />
@@ -19,4 +19,4 @@ function product() {
     )
 }
 
-export default product
+export default Product
