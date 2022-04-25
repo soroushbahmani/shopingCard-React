@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 // context
-import ProductContext from '../context/ProductContext'
+import {ProductContext} from '../context/ProductContextProvider'
 //components
-import Product from './shared/product'
+import Product from './shared/Product'
 
-function Store() {
+const Store = ()=> {
 
     const products = useContext(ProductContext)
     return (
         <div>
-           {products.map(Product => <Product key={Product.id} ProductData={Product} />)}
+            {console.log(products)}
+           {products.map(item => <Product key={item.id} ProductData={item} />)}
         </div>
     )
 }

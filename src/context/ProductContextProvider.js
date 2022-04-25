@@ -2,10 +2,12 @@ import React, { useState, useEffect, createContext } from 'react'
 // API
 import { getProducts } from '../services/api'
 
-export const ProductContext = createContext()
-const ProductContext = ({ children }) => {
+export const ProductContext = createContext();
+
+const ProductContextProvider = ({ children }) => {
+
     const [products, setProducts] = useState([])
-    children
+
     useEffect(() => {
 
         const fetchApi = async () => {
@@ -22,4 +24,4 @@ const ProductContext = ({ children }) => {
     )
 }
 
-export default ProductContext
+export default ProductContextProvider

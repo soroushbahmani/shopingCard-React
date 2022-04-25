@@ -1,12 +1,12 @@
 import React from 'react'
 
-function Product() {
+function Product({ProductData}) {
     return (
         <div>
-            <img src='' alt='img' />
-            <h3>title</h3>
+            <img src={ProductData.image} alt='img' />
+            <h3>{ProductData.title}</h3>
             <p>
-                price
+                {ProductData.price}
             </p>
             <div>
 

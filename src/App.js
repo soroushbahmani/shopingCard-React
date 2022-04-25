@@ -3,14 +3,14 @@ import './App.css';
 //components
 import Store from './components/Store';
 // context
-import ProductContext from './context/ProductContext';
+import ProductContextProvider, { ProductContext } from './context/ProductContextProvider';
 
 
 function App() {
   return (
-    <ProductContext>
+    <ProductContextProvider>
       <Store />
-    </ProductContext>
+    </ProductContextProvider>
   );
 }
 
