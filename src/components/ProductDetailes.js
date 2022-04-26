@@ -15,7 +15,7 @@ const ProductDetailes = () => {
             <img src={image} alt='img'/>
             <h3>{title}</h3>
             <p>{description}</p>
-            <p>{category}</p>
+            <p><span>category : </span> {category}</p>
             <div>
                 <span>{price}</span>
                 <Link to='/product'>back to shop</Link>
