@@ -5,18 +5,21 @@ import Store from './components/Store';
 import ProductDetailes from './components/ProductDetailes';
 // context
 import ProductContextProvider, { ProductContext } from './context/ProductContextProvider';
+import CartContextProvider from './context/CartContextProvider';
 // route
-import {Route,Routes,Link,Navigate} from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
 
 function App() {
   return (
     <ProductContextProvider>
-      <Routes>
-        <Route path='/products' element={<Store/>}/>
-        <Route path='/product/:id' element={<ProductDetailes />}/>
-        <Route path='/' element={<Navigate to='/products'/>}/>
-        <Route path='/*' element={<Navigate to='/products'/>}/>
-      </Routes>
+      <CartContextProvider>
+        <Routes>
+          <Route path='/products' element={<Store />} />
+          <Route path='/product/:id' element={<ProductDetailes />} />
+          <Route path='/' element={<Navigate to='/products' />} />
+          <Route path='/*' element={<Navigate to='/products' />} />
+        </Routes>
+      </CartContextProvider>
     </ProductContextProvider>
   );
 }
