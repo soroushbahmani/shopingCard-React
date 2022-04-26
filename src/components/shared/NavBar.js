@@ -2,16 +2,22 @@ import React, { useContext } from 'react'
 // context
 import { CardContext } from '../../context/CartContextProvider'
 // routes
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NavBar = () => {
   const { state } = useContext(CardContext);
 
   return (
     <div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
       <Link to='/cart'>shop</Link> : {state.itemCounter}
-      <hr/>
+      &nbsp;
+      &nbsp;
+      &nbsp;
       <Link to='/products'>product</Link>
+      <hr />
     </div>
   )
 }
