@@ -3,20 +3,22 @@ import React, { useContext } from 'react'
 import { CardContext } from '../../context/CartContextProvider'
 //function
 import { Shorten } from '../../helpers/function';
+//css
+import style from './Cart.modul.css'
 const Cart = (props) => {
   const { dispatch } = useContext(CardContext);
   const { image, title, price, quantity } = props.data;
   return (
-    <div>
-      <img src={image} style={{ width: '100px' }} alt='img' />
-      <div>
+    <div className={style.container}>
+      <img className={style.productImage} src={image} alt='img' />
+      <div className={style.data}>
         <h3>{Shorten(title)}</h3>
         <p>{price}$</p>
       </div>
       <div>
-        <span>{quantity}</span>
+        <span className={style.quantity}>{quantity}</span>
       </div>
-      <div>
+      <div className={style.buttonContainer}>
         {
           quantity > 1 ?
             <button onClick={() => dispatch({ type: "DICREASE", payload: props.data })}>-</button>
