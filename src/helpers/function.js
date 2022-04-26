@@ -3,4 +3,10 @@ const Shorten = (title) => {
     const newTitle = `${splitedTitle[0]} ${splitedTitle[1]}`;
     return newTitle
 }
-export  {Shorten}
+
+const isInCard = (state, id) => {
+    const result = !!state.selectedItem.find(item => item.id === id)
+    return result;
+}
+
+export { Shorten,isInCard }
