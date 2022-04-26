@@ -12,10 +12,10 @@ function App() {
   return (
     <ProductContextProvider>
       <Routes>
-        <Route path='/product' element={<Store/>}/>
-        <Route path='/product/:id' element={<ProductDetailes/>}/>
-        <Route path='/' element={<Navigate to='/product'/>}/>
-        <Route path='/*' element={<Navigate to='/product'/>}/>
+        <Route path='/products' element={<Store/>}/>
+        <Route path='/product/:id' element={<ProductDetailes />}/>
+        <Route path='/' element={<Navigate to='/products'/>}/>
+        <Route path='/*' element={<Navigate to='/products'/>}/>
       </Routes>
     </ProductContextProvider>
   );

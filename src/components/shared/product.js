@@ -13,7 +13,6 @@ function Product({ ProductData }) {
                 {ProductData.price}
             </p>
             <div>
-
                 <Link to={`/product/${ProductData.id}`}>detaled</Link>
             </div>
             <div>
