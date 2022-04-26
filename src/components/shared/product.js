@@ -23,7 +23,7 @@ function Product({ ProductData }) {
                         isInCard(state, ProductData.id) ?
                             <button className={style.smallButton} onClick={() => dispatch({ type: "INCREASE", payload: ProductData })}>+</button>
                             :
-                            <button className={style.smallButton} onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>Add To Cart </button>
+                            <button onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>Add To Cart </button>
 
                     }
                     {quantity(state, ProductData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "DICREASE", payload: ProductData })}>-</button>}
