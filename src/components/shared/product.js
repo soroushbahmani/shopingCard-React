@@ -1,7 +1,7 @@
 import React from 'react'
 
 //helpers
-import {Shorten} from '../helpers/function'
+import {Shorten} from '../../helpers/function'
 
 function Product({ProductData}) {
     return (
