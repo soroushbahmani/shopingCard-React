@@ -14,7 +14,8 @@ function App() {
       <Routes>
         <Route path='/product' element={<Store/>}/>
         <Route path='/product/:id' element={<ProductDetailes/>}/>
-        <Route path='/*' element={<Navigate to='/'/>}/>
+        <Route path='/' element={<Navigate to='/product'/>}/>
+        <Route path='/*' element={<Navigate to='/product'/>}/>
       </Routes>
     </ProductContextProvider>
   );
