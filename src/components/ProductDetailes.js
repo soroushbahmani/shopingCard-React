@@ -3,6 +3,8 @@ import React, { useContext } from 'react'
 import { ProductContext } from '../context/ProductContextProvider'
 // route
 import { useParams , Link } from 'react-router-dom'
+//css
+import style from './ProductDetailes.module.css'
 
 const ProductDetailes = () => {
     const props = useParams()
