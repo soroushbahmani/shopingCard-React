@@ -2,14 +2,14 @@ import React, { useContext } from 'react'
 //route
 import { Route, Link } from 'react-router-dom'
 //helpers
-import { Shorten } from '../../helpers/function'
+import { Shorten, isInCard } from '../../helpers/function'
 //context
 import { CardContext } from '../../context/CartContextProvider'
 
 function Product({ ProductData }) {
 
     const { state, dispatch } = useContext(CardContext);
-    
+
     return (
         <div style={{ margin: ' 0 20px' }}>
             <img src={ProductData.image} alt='img' style={{ "width": '200px' }} />
@@ -21,7 +21,13 @@ function Product({ ProductData }) {
                 <Link to={`/product/${ProductData.id}`}>detaled</Link>
             </div>
             <div>
-                <button>add to card</button>
+                {
+                    isInCard(state, ProductData.id) ?
+                        <button onClick={() => dispatch({ type: "INCREASE", payload: ProductData })}>+</button>
+                        :
+                        <button onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>add card</button>
+
+                }
             </div>
         </div>
     )

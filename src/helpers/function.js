@@ -5,7 +5,7 @@ const Shorten = (title) => {
 }
 
 const isInCard = (state, id) => {
-    const result = !!state.selectedItem.find(item => item.id === id)
+    const result = !!state.selectedItems.find(item => item.id === id)
     return result;
 }
 
