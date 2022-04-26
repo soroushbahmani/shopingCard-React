@@ -4,7 +4,7 @@ import './App.css';
 import Store from './components/Store';
 import ProductDetailes from './components/ProductDetailes';
 import NavBar from './components/shared/NavBar';
-import Cart from './components/Cart';
+import ShopCart from './components/ShopCart';
 // context
 import ProductContextProvider, { ProductContext } from './context/ProductContextProvider';
 import CartContextProvider from './context/CartContextProvider';
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path='/products' element={<Store />} />
           <Route path='/product/:id' element={<ProductDetailes />} />
-          <Route path='/cart' element={<Cart/>} />
+          <Route path='/shopcart' element={<ShopCart/>} />
           <Route path='/' element={<Navigate to='/products' />} />
           <Route path='/*' element={<Navigate to='/products' />} />
         </Routes>

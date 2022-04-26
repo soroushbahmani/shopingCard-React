@@ -12,7 +12,7 @@ const NavBar = () => {
       &nbsp;
       &nbsp;
       &nbsp;
-      <Link to='/cart'>shop</Link> : {state.itemCounter}
+      <Link to='/shopcart'>shop</Link> : {state.itemCounter}
       &nbsp;
       &nbsp;
       &nbsp;
