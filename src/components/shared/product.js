@@ -26,8 +26,9 @@ function Product({ ProductData }) {
                             <button onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>Add To Cart </button>
 
                     }
-                    {quantity(state, ProductData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "DICREASE", payload: ProductData })}>-</button>}
+                    {quantity(state, ProductData.id) > 0 && <span className={style.counter}>{quantity(state, ProductData.id)}</span>}
                     {quantity(state, ProductData.id) === 1 && <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: ProductData })}>remove</button>}
+                    {quantity(state, ProductData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "DICREASE", payload: ProductData })}>-</button>}
                 </div>
             </div>
         </div>

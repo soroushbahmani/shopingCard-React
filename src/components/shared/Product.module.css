@@ -68,6 +68,9 @@
     line-height: 30px;
 
 }
+.counter{
+    padding: 0 5px;
+}
 .buttonContainer button:hover{
 background-color: #0b499b;
 }
