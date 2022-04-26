@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom'
 //css
 import style from './NavBar.module.css'
 
+
+
+
+
+
 const NavBar = () => {
   const { state } = useContext(CardContext);
 
@@ -13,9 +18,9 @@ const NavBar = () => {
     <div className={style.mainContainer}>
       <div className={style.container}>
         <Link to='/products' className={style.productLink}>Product</Link>
-        <div>
-          <Link to='/shopcart'>icon</Link>
-          <span>{state.itemCounter}</span>
+        <div className={style.p_counter}>
+          <Link to='/shopcart'><i className='fa fa-shopping-cart '></i></Link>
+          <span className={style.counetr}>{state.itemCounter}</span>
         </div>
       </div>
 

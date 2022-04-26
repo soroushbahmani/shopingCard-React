@@ -19,16 +19,16 @@ function Product({ ProductData }) {
             <div className={style.linkContainer}>
                 <Link to={`/product/${ProductData.id}`}>Details</Link>
                 <div className={style.buttonContainer}>
+                    {quantity(state, ProductData.id) === 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: ProductData })}><i className='fa fa-trash'></i></button>}
+                    {quantity(state, ProductData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "DICREASE", payload: ProductData })}>-</button>}
+                    {quantity(state, ProductData.id) > 0 && <span className={style.counter}>{quantity(state, ProductData.id)}</span>}
                     {
                         isInCard(state, ProductData.id) ?
-                            <button className={style.smallButton} onClick={() => dispatch({ type: "INCREASE", payload: ProductData })}>+</button>
-                            :
-                            <button onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>Add To Cart </button>
-
+                        <button className={style.smallButton} onClick={() => dispatch({ type: "INCREASE", payload: ProductData })}>+</button>
+                        :
+                        <button onClick={() => dispatch({ type: "ADD_ITEM", payload: ProductData })}>Add To Cart </button>
+                        
                     }
-                    {quantity(state, ProductData.id) > 0 && <span className={style.counter}>{quantity(state, ProductData.id)}</span>}
-                    {quantity(state, ProductData.id) === 1 && <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: ProductData })}>remove</button>}
-                    {quantity(state, ProductData.id) > 1 && <button className={style.smallButton} onClick={() => dispatch({ type: "DICREASE", payload: ProductData })}>-</button>}
                 </div>
             </div>
         </div>

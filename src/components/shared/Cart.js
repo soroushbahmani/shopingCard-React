@@ -24,7 +24,7 @@ const Cart = (props) => {
           quantity > 1 ?
             <button onClick={() => dispatch({ type: "DICREASE", payload: props.data })}>-</button>
             :
-            <button className={style.remove} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: props.data })}>remove</button>
+            <button className={style.remove} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: props.data })}><i className='fa fa-trash'></i></button>
         }
         <button onClick={() => dispatch({ type: "INCREASE", payload: props.data })}>+</button>
 
