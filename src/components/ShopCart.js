@@ -1,4 +1,6 @@
 import React,{ useContext } from 'react'
+// routes
+import { Link } from 'react-router-dom';
 //context
 import { CardContext } from '../context/CartContextProvider'
 //components
@@ -23,6 +25,18 @@ const ShopCart = () => {
                         <button onClick={()=> dispatch({type:"CHECKOUT"})}>check out</button>
                         <button onClick={()=> dispatch({type:"CLEAR"})}>clear</button>
                     </div>
+                </div>
+            }
+            {
+                state.checkout && <div>
+                    <h3>checked out successFully</h3>
+                    <Link to='/products'>buy more</Link>
+                </div>
+            }    
+                  {
+                state.itemCounter === 0 && !state.checkout  && <div>
+                    <h3>want to buy?</h3>
+                    <Link to='/products'>go back to shop</Link>
                 </div>
             }
         </div>
