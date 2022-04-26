@@ -4,7 +4,8 @@ import { CardContext } from '../../context/CartContextProvider'
 //function
 import { Shorten } from '../../helpers/function';
 //css
-import style from './Cart.modul.css'
+import style from './Cart.module.css'
+
 const Cart = (props) => {
   const { dispatch } = useContext(CardContext);
   const { image, title, price, quantity } = props.data;
@@ -23,9 +24,9 @@ const Cart = (props) => {
           quantity > 1 ?
             <button onClick={() => dispatch({ type: "DICREASE", payload: props.data })}>-</button>
             :
-            <button onClick={() => dispatch({ type: "REMOVE_ITEM", payload: props.data })}>remove</button>
+            <button className={style.remove} onClick={() => dispatch({ type: "REMOVE_ITEM", payload: props.data })}>remove</button>
         }
-        <button onClick={() => dispatch({ type: "INCREASE", payload: props.data })}>add card</button>
+        <button onClick={() => dispatch({ type: "INCREASE", payload: props.data })}>+</button>
 
       </div>
     </div>
