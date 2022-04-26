@@ -3,6 +3,8 @@ import React, { useContext } from 'react'
 import { CardContext } from '../../context/CartContextProvider'
 // routes
 import { Link } from 'react-router-dom'
+//css
+import style from 'NavBar.module.css'
 
 const NavBar = () => {
   const { state } = useContext(CardContext);

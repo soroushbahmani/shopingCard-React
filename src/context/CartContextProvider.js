@@ -34,7 +34,7 @@ const cardReduser = (state, action) => {
             return {
                 ...state,
                 selectedItems: [...newSelectedItems],
-                ...sumItem(state.selectedItems)
+                ...sumItem(newSelectedItems)
 
             }
         case "INCREASE":
