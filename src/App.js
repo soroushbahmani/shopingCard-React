@@ -9,6 +9,7 @@ import ShopCart from './components/ShopCart';
 import ProductContextProvider, { ProductContext } from './context/ProductContextProvider';
 import CartContextProvider from './context/CartContextProvider';
 // route
+// route
 import { Route, Routes, Navigate } from 'react-router-dom'
 
 function App() {
